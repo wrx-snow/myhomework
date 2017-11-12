@@ -1,0 +1,26 @@
+<html>
+<head>
+	<title>更改密码</title>
+	<meta charset = 'utf8'>
+</head>
+<body>
+	<%= form_for(:user,:url=>"/home/passwdcheck") do |f| %>
+		<div class="field">
+    		<%= f.label :account %><br>
+    		<%= f.text_field :account %>
+  		</div>
+  		<div class="field">
+    		<%= f.label :oldpassword %><br>
+    		<%= f.text_field :oldpassword %>
+  		</div>
+  		<div class="field">
+    		<%= f.label :newpassword %><br>
+    		<%= f.text_field :newpassword %>
+  		</div>
+  		<div class="actions">
+    		<%= f.submit '更改密码'%>
+  		</div>
+	<% end %>
+  <%=link_to '返回',:action=>'index',:controller=>'home'%>
+</body>
+</html>
